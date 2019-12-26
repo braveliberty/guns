@@ -1,0 +1,21 @@
+package com.stylefeng.guns.rest.common.persistence.dao;
+
+import com.stylefeng.guns.api.user.film.vo.ActorVO;
+import com.stylefeng.guns.rest.common.persistence.model.MoocActorT;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
+
+import java.util.List;
+
+/**
+ * <p>
+ * 演员表 Mapper 接口
+ * </p>
+ *
+ * @author 徐思思
+ * @since 2019-12-05
+ */
+public interface MoocActorTMapper extends BaseMapper<MoocActorT> {
+
+    List<ActorVO> getActors(String filmId);
+
+}
