@@ -3,6 +3,7 @@ package com.stylefeng.guns.rest.common.persistence.dao;
 import com.stylefeng.guns.api.user.film.vo.FilmDetailVO;
 import com.stylefeng.guns.rest.common.persistence.model.MoocFilmT;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Repository;
  * @since 2019-12-05
  */
 @Repository
+@Mapper
 public interface MoocFilmTMapper extends BaseMapper<MoocFilmT> {
 
     FilmDetailVO getFilmDetailByName(@Param("filmName") String filmName);

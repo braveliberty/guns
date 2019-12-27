@@ -186,6 +186,12 @@ public class FilmController {
             FilmDetailVO filmDetail = filmServiceApi.getFilmDetail(searchType,searchParam);
          //不同查询类型，判断条件略有不同
          //查询影片的详细信息-->dubbo的异步获取
+
+         if(filmDetail.getFilmId() ==null){
+             return ResponseVO.serviceFail("没有可查询影片");
+         }else if (filmDetail.getFilmId().trim().length()==0){
+             return ResponseVO.serviceFail("没有可查询影片");
+         }
             String filmId = filmDetail.getFilmId();
 
          //获取影片描述信息
