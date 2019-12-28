@@ -3,6 +3,7 @@ package com.stylefeng.guns.rest.common.persistence.dao;
 import com.stylefeng.guns.api.user.film.vo.ActorVO;
 import com.stylefeng.guns.rest.common.persistence.model.MoocActorT;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,6 +17,6 @@ import java.util.List;
  */
 public interface MoocActorTMapper extends BaseMapper<MoocActorT> {
 
-    List<ActorVO> getActors(String filmId);
+    List<ActorVO> getActors(@Param("filmId") String filmId);g
 
 }
