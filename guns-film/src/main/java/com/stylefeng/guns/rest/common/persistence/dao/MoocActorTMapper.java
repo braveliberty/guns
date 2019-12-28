@@ -17,6 +17,6 @@ import java.util.List;
  */
 public interface MoocActorTMapper extends BaseMapper<MoocActorT> {
 
-    List<ActorVO> getActors(@Param("filmId") String filmId);g
+    List<ActorVO> getActors(@Param("filmId") String filmId);
 
 }
